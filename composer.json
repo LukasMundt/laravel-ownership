@@ -1,0 +1,54 @@
+{
+    "name": "lukasmundt/laravel-ownership",
+    "description": "This model makes it possible to assign an ownable model to one or many owners.",
+    "keywords": [
+        "lukasmundt",
+        "laravel-ownership"
+    ],
+    "homepage": "https://github.com/lukasmundt/laravel-ownership",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Lukas Mundt",
+            "email": "kontakt@lukas-mundt.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lukasmundt\\LaravelOwnership\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lukasmundt\\LaravelOwnership\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lukasmundt\\LaravelOwnership\\LaravelOwnershipServiceProvider"
+            ],
+            "aliases": {
+                "LaravelOwnership": "Lukasmundt\\LaravelOwnership\\LaravelOwnershipFacade"
+            }
+        }
+    }
+}
