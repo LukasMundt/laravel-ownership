@@ -1,9 +1,7 @@
 <?php
 namespace Lukasmundt\LaravelOwnership\Traits;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Lukasmundt\Akquise\Models\Projekt;
 use Lukasmundt\LaravelOwnership\Contracts\CanHaveOwner;
 
 trait HasOwnables
